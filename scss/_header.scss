@@ -1,0 +1,15 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--first-color);
+    transition: box-shadow .4s;
+    z-index: var(--z-fixed);
+}
+.shadow-header{
+    box-shadow: 0 2px 16px hsla(0, 0%, 0%, .15);
+}
+
+
+

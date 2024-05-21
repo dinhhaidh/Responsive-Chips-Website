@@ -1,0 +1,117 @@
+.contact{
+    &__container{
+        position: relative;
+        background-color: var(--first-color-darken);
+        padding-top: 3.5rem;
+        border-radius: 3rem;
+        box-shadow: inset var(--shadow-card);
+        overflow: hidden;
+    }
+    &__content{
+        padding-top: 1rem;
+        row-gap: 3rem;
+    }
+    &__data{
+        text-align: center;
+    }
+    &__title{
+        font: var(--font-regular) var(--h2-font-size) var(--second-font);
+        margin-bottom: 0.5rem;
+    }
+    &__social{
+        display:flex;
+        justify-content: center;
+        column-gap: .75rem;
+    }
+    &__social a{
+        color: var(--second-color);
+        font-size: 1.5rem;
+    }
+    &__info{
+        font-style: normal;
+    }
+    &__img{
+        width: 200px;
+        justify-self: center;
+        filter: var(--shadow-img);
+    }
+    &__shrimp,
+    &__crab,
+    &__meat{
+        position: absolute;
+        width: 40px;
+        opacity: .5;
+    }
+    &__shrimp{
+        top: 9rem;
+        right: 0.15rem;
+        rotate: 15deg;
+    }
+    &__crab{
+        top: 17rem;
+        left: 1rem;
+        rotate: 15deg;
+    }
+    &__meat{
+        right: 2rem;
+        bottom: 11rem;
+        rotate: -15deg;
+    }
+    @media screen and (min-width: 540px){
+        display: grid;
+        grid-template-columns: 450px;
+        justify-content: center;
+    }
+    @media screen and (min-width: 768px){
+        grid-template-columns: 550px;
+    }
+
+    @media screen and (min-width: 1150px){
+        display: block;
+        &__container{
+            border-radius: 4rem;
+        }
+        &__content{
+            grid-template: 330px / 360px 320px;
+            justify-content: center;
+            align-items: center;
+            column-gap: 10rem;
+            padding-top: 2rem;
+        }
+        &__data{
+            text-align: initial;
+            grid-template: max-content / repeat(2, max-content);
+            gap: 3rem 2rem;
+        }
+        &__title{
+            margin-bottom: 0.75rem;
+        }
+        &__social{
+            justify-content: initial;
+        }
+        &__img{
+            width: 320px;
+            transform: translateY(-3rem);
+        }
+        &__shrimp,
+        &__crab,
+        &__meat{
+            width: 80px;
+        }
+        &__shrimp{
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 20rem;
+        }
+        &__crab{
+            top: 5rem;
+            left: 4rem;
+        }
+        &__meat{
+            right: initial;
+            left: 12rem;
+            bottom: -1rem;
+        }
+    }
+}
